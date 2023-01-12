@@ -15,9 +15,10 @@ export SCRAM_ARCH=slc7_amd64_gcc820
 cmsrel CMSSW_11_1_7
 cd CMSSW_11_1_7/src
 git clone -b wbwbxUL git@github.com:<yourname>/nanoAOD-tools.git PhysicsTools/NanoAODTools
-cd PhysicsTools/NanoAODTools
 cmsenv
+source PhysicsTools/NanoAODTools/scripts/install_py2-correctionlib.sh
 scram b
+cd PhysicsTools/NanoAODTools
 ```
 
 Note that only `CMSSW_11_X` or higher includes TensorFlow v2.1 which is used for training the b charge tagger. To check which TF version comes with CMSSW use ```scram tool list | grep tensorflow```.
