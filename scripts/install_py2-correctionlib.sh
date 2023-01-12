@@ -76,7 +76,6 @@ if [[ "${pyvers}" == "py2" ]]; then
   pypkgdir="${installpath}/lib/python${pymajmin}/site-packages/correctionlib"
   mkdir -p "${pypkgdir}/lib"
   echo "" > "${pypkgdir}/__init__.py"
-  echo "AAAAA"
   cp "_core.so" "${pypkgdir}"
   cp "lib/libcorrectionlib.so" "${pypkgdir}/lib"
   mkdir -p "${installpath}/include"
