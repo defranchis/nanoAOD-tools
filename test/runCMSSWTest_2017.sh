@@ -10,6 +10,7 @@ function run_test()
     eval `scram runtime -sh` || return 1
     mkdir -p PhysicsTools/NanoAODTools
     rsync -r --stats /scripts/ PhysicsTools/NanoAODTools/. || return 1
+    source PhysicsTools/NanoAODTools/scripts/install_py2-correctionlib.sh
     echo
     echo "==================== compiling ================"
     scram b || return 1
